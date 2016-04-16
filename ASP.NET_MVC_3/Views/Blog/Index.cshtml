@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+
+@model IEnumerable<ASP.NET_MVC_3.Models.Blog>
+
+<style type="text/css">
+    span {
+        color: white;
+    }
+</style>
+
+<h2>Blogs</h2>
+
+@foreach (var blog in Model)
+{
+    Html.RenderPartial("BlogDetails", blog);
+   
+}
